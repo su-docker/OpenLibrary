@@ -8,7 +8,7 @@ import static com.googlecode.javacv.cpp.opencv_core.cvPoint;
 import static com.googlecode.javacv.cpp.opencv_core.cvRectangle;
 import static com.googlecode.javacv.cpp.opencv_highgui.cvLoadImage;
 import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
-import static com.googlecode.javacv.cpp.opencv_imgproc.CV_BGR2GRAY;
+import static com.googlecode.javacv.cpp.opencv_imgproc.CV_RGB2GRAY;
 import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
 import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
 
@@ -39,7 +39,7 @@ public class Sample {
 				originalImage.height(), IPL_DEPTH_8U, 1);
 
 		// We convert the original image to grayscale.
-		cvCvtColor(originalImage, grayImage, CV_BGR2GRAY);
+		cvCvtColor(originalImage, grayImage, CV_RGB2GRAY);
 
 		CvMemStorage storage = CvMemStorage.create();
 
